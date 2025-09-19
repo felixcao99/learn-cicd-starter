@@ -13,7 +13,7 @@ func TestGetAPIKey(t *testing.T) {
 		textproto.CanonicalMIMEHeaderKey("Authorization"): {"ApiKey TESTTOKEN"},
 	}
 	got, _ := GetAPIKey(headers)
-	want := "TEST"
+	want := "TESTTOKEN"
 
 	if !reflect.DeepEqual(want, got) {
 		t.Fatalf("expected: %v, got: %v", want, got)
